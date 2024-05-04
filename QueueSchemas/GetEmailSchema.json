@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "folder",
+        "unread",
+        "attachmentsOnly"
+    ],
+    "properties": {
+        "folder": {
+            "type": "string",
+            "default": "",
+            "title": "The folder Schema",
+            "examples": [
+                "Inbox"
+            ]
+        },
+        "unread": {
+            "type": "boolean",
+            "default": false,
+            "title": "The unread Schema",
+            "examples": [
+                true
+            ]
+        },
+        "attachmentsOnly": {
+            "type": "boolean",
+            "default": false,
+            "title": "The attachmentsOnly Schema",
+            "examples": [
+                false
+            ]
+        }
+    },
+    "examples": [{
+        "folder": "Inbox",
+        "unread": true,
+        "attachmentsOnly": false
+    }]
+}

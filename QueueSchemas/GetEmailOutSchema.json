@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "body",
+        "subject"
+    ],
+    "properties": {
+        "body": {
+            "type": "string",
+            "default": "",
+            "title": "The body Schema",
+            "examples": [
+                "A message body"
+            ]
+        },
+        "subject": {
+            "type": "string",
+            "default": "",
+            "title": "The subject Schema",
+            "examples": [
+                "A message subject"
+            ]
+        }
+    },
+    "examples": [{
+        "body": "A message body",
+        "subject": "A message subject"
+    }]
+}
