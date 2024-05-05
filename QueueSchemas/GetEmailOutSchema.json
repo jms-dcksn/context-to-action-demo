@@ -6,7 +6,8 @@
     "title": "Root Schema",
     "required": [
         "body",
-        "subject"
+        "subject",
+        "bodyText"
     ],
     "properties": {
         "body": {
@@ -14,7 +15,7 @@
             "default": "",
             "title": "The body Schema",
             "examples": [
-                "A message body"
+                "A message body in HTML"
             ]
         },
         "subject": {
@@ -24,10 +25,19 @@
             "examples": [
                 "A message subject"
             ]
+        },
+        "bodyText": {
+            "type": "string",
+            "default": "",
+            "title": "The bodyText Schema",
+            "examples": [
+                "raw text of body"
+            ]
         }
     },
     "examples": [{
-        "body": "A message body",
-        "subject": "A message subject"
+        "body": "A message body in HTML",
+        "subject": "A message subject",
+        "bodyText": "raw text of body"
     }]
 }

@@ -13655,9 +13655,9 @@
     "restore": {
       "projectUniqueName": "ContextToAction-GetEmail",
       "projectName": "ContextToAction-GetEmail",
-      "projectPath": "C:\\Users\\james.dickson\\OneDrive - UiPath\\Documents\\UiPath\\ContextToAction-GetEmail\\.local",
+      "projectPath": "C:\\Users\\james.dickson\\source\\repos\\context-to-action\\Processes\\ContextToAction-GetEmail\\.local",
       "packagesPath": "C:\\Users\\james.dickson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\james.dickson\\OneDrive - UiPath\\Documents\\UiPath\\ContextToAction-GetEmail\\.local",
+      "outputPath": "C:\\Users\\james.dickson\\source\\repos\\context-to-action\\Processes\\ContextToAction-GetEmail\\.local",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TMYaegSalQIzNLLdleriLr1h37LTFyvagT/pUTyvIG6j6YoC1A5tWFIO2a0MhkWNtCI8I160tYjB03xctWInww==",
+  "dgSpecHash": "SGT+oYDaXcShGP58ulGq1yQzeaOfjja131sw+xV4BtuQblQ2rxcDt67qbRoG+qN3t2XFFZpLTVc8GYw/h2cuBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\james.dickson\\OneDrive - UiPath\\Documents\\UiPath\\ContextToAction-GetEmail\\.local\\",
+  "projectFilePath": "C:\\Users\\james.dickson\\source\\repos\\context-to-action\\Processes\\ContextToAction-GetEmail\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\james.dickson\\.nuget\\packages\\azure.core\\1.36.0\\azure.core.1.36.0.nupkg.sha512",
     "C:\\Users\\james.dickson\\.nuget\\packages\\azure.storage.blobs\\12.19.1\\azure.storage.blobs.12.19.1.nupkg.sha512",

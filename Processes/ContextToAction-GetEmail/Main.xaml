@@ -7,7 +7,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>901,1218</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1042,1218</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,6 +100,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1153" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -112,7 +113,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="Personal/ContextToAction" sap:VirtualizedContainerService.HintSize="450,183" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="EmailQueue" TransactionItem="[TransactionItem]">
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="Personal/ContextToAction" sap:VirtualizedContainerService.HintSize="450,183" sap2010:WorkflowViewState.IdRef="GetQueueItem_3" QueueType="EmailQueue" TransactionItem="[TransactionItem]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -120,7 +121,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetQueueItem>
-    <umam:GetNewestEmail BrowserFolder="{x:Null}" BrowserFolderId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" Mailbox="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" ConnectionId="0aa1fc59-d2ec-4241-80ca-b1b94a9bc625" DisplayName="Get Newest Email" sap:VirtualizedContainerService.HintSize="450,243" sap2010:WorkflowViewState.IdRef="GetNewestEmail_1" Importance="Any" ManualEntryFolder="[TransactionItem.SpecificContent(&quot;folder&quot;).ToString]" MarkAsRead="False" Result="[Email]" SelectionMode="EnterPath" UnreadOnly="[cBool(TransactionItem.SpecificContent(&quot;unread&quot;))]" UseConnectionService="True" WithAttachmentsOnly="[cBool(TransactionItem.SpecificContent(&quot;attachmentsOnly&quot;))]">
+    <umam:GetNewestEmail ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" Mailbox="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inbox" BrowserFolderId="AQMkAGU3YjdkZjViLWNiMjEtNGQwZi1iMmMwLWQ3YWI5NjQyYTczMQAuAAADEpla9T4R5UCr8LfnttFZfQEA7N1vDJlRbEuLdqF7u1xcAAgAAAIBDAAAAA==" ConnectionId="0aa1fc59-d2ec-4241-80ca-b1b94a9bc625" DisplayName="Get Newest Email" sap:VirtualizedContainerService.HintSize="450,243" sap2010:WorkflowViewState.IdRef="GetNewestEmail_1" Importance="Any" ManualEntryFolder="[TransactionItem.SpecificContent(&quot;folder&quot;).ToString]" MarkAsRead="False" Result="[Email]" SelectionMode="EnterPath" UnreadOnly="[cBool(TransactionItem.SpecificContent(&quot;unread&quot;))]" UseConnectionService="True" WithAttachmentsOnly="[cBool(TransactionItem.SpecificContent(&quot;attachmentsOnly&quot;))]">
       <umam:GetNewestEmail.FolderIdBackup>
         <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" StoredValue="EnterPath">
           <usau:BackupSlot.BackupValues>
@@ -132,7 +133,7 @@
         </usau:BackupSlot>
       </umam:GetNewestEmail.FolderIdBackup>
     </umam:GetNewestEmail>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Retrieved email with ID: &quot; + Email.MessageId]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Retrieved email with ID: &quot; + Email.MessageId + vbCrLf + &quot;Body as text: &quot; + Email.Body]" />
     <Assign sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_Body]</OutArgument>
@@ -156,6 +157,7 @@
       <ui:SetTransactionStatus.Output>
         <InArgument x:TypeArguments="x:String" x:Key="body">[out_Body]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="subject">[out_Subject]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="bodyText">[Email.Body]</InArgument>
       </ui:SetTransactionStatus.Output>
     </ui:SetTransactionStatus>
   </Sequence>

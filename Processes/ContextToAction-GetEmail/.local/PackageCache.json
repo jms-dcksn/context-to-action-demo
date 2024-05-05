@@ -2,6 +2,50 @@
   "Packages": [
     {
       "Package": {
+        "Id": "UiPath.MicrosoftOffice365.Activities",
+        "Version": "2.5.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\james.dickson\\.nuget\\packages\\azure.core\\1.36.0\\lib/net6.0/Azure.Core.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\documentformat.openxml\\2.7.2\\lib/netstandard1.3/DocumentFormat.OpenXml.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.logging\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20240209.4\\lib/net6.0/System.Activities.ViewModels.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.drawing.common\\5.0.0\\runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\lib/net6.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.io.packaging\\4.0.0\\lib/netstandard1.3/System.IO.Packaging.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.security.permissions\\5.0.0\\lib/net5.0/System.Security.Permissions.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\system.windows.extensions\\5.0.0\\runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9\\lib/net6.0/UiPath.MicrosoftOffice365.Activities.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9\\lib/net6.0/UiPath.MicrosoftOffice365.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.platform\\24.2.0\\lib/net6.0/UiPath.Platform.dll",
+        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9"
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "24.2.0-preview"
       },
@@ -78,50 +122,6 @@
         "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.uiautomation.activities.runtime.portable\\24.2.0-preview\\lib/net6.0/UiPath.UIAutomationNext.Activities.dll"
       ],
       "Path": "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.uiautomation.activities\\24.2.0-preview"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.MicrosoftOffice365.Activities",
-        "Version": "2.5.9"
-      },
-      "Assemblies": [
-        "C:\\Users\\james.dickson\\.nuget\\packages\\azure.core\\1.36.0\\lib/net6.0/Azure.Core.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\closedxml\\0.95.4\\lib/netstandard2.0/ClosedXML.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\documentformat.openxml\\2.7.2\\lib/netstandard1.3/DocumentFormat.OpenXml.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\excelnumberformat\\1.0.10\\lib/netstandard2.0/ExcelNumberFormat.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.logging\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.35.0\\lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/netstandard2.0/Newtonsoft.Json.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20240209.4\\lib/net6.0/System.Activities.ViewModels.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.drawing.common\\5.0.0\\runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\lib/net6.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.io.packaging\\4.0.0\\lib/netstandard1.3/System.IO.Packaging.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.runtime.caching\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.security.permissions\\5.0.0\\lib/net5.0/System.Security.Permissions.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\system.windows.extensions\\5.0.0\\runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9\\lib/net6.0/UiPath.MicrosoftOffice365.Activities.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9\\lib/net6.0/UiPath.MicrosoftOffice365.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.platform\\24.2.0\\lib/net6.0/UiPath.Platform.dll",
-        "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\james.dickson\\.nuget\\packages\\uipath.microsoftoffice365.activities\\2.5.9"
     }
   ],
   "Conflicts": [],
