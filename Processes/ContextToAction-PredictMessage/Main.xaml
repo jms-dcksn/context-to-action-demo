@@ -8,7 +8,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>867,2871</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2387,2871</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -118,7 +118,7 @@
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="LabelsList" />
       <Variable x:TypeArguments="x:String" Name="Auth">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">Bearer AHJNI3HA2UELJT62XLMA65NJSZ3QVSTIH4NB6R4HKHHKPMI2</Literal>
+          <Literal x:TypeArguments="x:String" xml:space="preserve">Bearer </Literal>
         </Variable.Default>
       </Variable>
     </Sequence.Variables>
