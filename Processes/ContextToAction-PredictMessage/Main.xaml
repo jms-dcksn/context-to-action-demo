@@ -115,9 +115,10 @@
       <Variable x:TypeArguments="x:String" Name="PredictPayload" />
       <Variable x:TypeArguments="x:String" Name="Response" />
       <Variable x:TypeArguments="njl:JObject" Name="JsonResponse" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="LabelsList">
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="LabelsList" />
+      <Variable x:TypeArguments="x:String" Name="Auth">
         <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(of String)" />
+          <Literal x:TypeArguments="x:String">Bearer AHJNI3HA2UELJT62XLMA65NJSZ3QVSTIH4NB6R4HKHHKPMI2</Literal>
         </Variable.Default>
       </Variable>
     </Sequence.Variables>
@@ -149,7 +150,7 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Cookies>
       <ui:HttpClient.Headers>
-        <InArgument x:TypeArguments="x:String" x:Key="Authorization">Bearer AHJNI3HA2UELJT62XLMA65NJSZ3QVSTIH4NB6R4HKHHKPMI2</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Authorization">[Auth]</InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
