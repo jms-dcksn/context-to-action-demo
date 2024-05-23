@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_Subject="Insurance- new driver CA 4322231" this:Main.in_Message="CAUTION: This email originated from outside of COMPANY. Do not click links or open attachments unless you recognize the sender and know the content is safe. Think before you click! Hi there, As of today, we have a newly licensed driver! Will you please add James Dickson to our account?" this:Main.in_PredictUrl="https://cloud.uipath.com/communicationsminingteam/InternalIltTraining/reinfer_/api/v1/datasets/nathan-ness-sandbox/sla2h/labellers/187/predict" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_Subject="Insurance- new driver CA 4322231" this:Main.in_Message="CAUTION: This email originated from outside of COMPANY. Do not click links or open attachments unless you recognize the sender and know the content is safe. Think before you click! Hi there, As of today, we have a newly licensed driver! Will you please add James Dickson to our account?" this:Main.in_PredictUrl="https://cloud.uipath.com/communicationsminingteam/InternalIltTraining/reinfer_/api/v1/datasets/nathan-ness-sandbox/sla2h/labellers/187/predict" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Subject" Type="InArgument(x:String)" />
     <x:Property Name="in_Message" Type="InArgument(x:String)" />
@@ -8,7 +8,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>2387,2871</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1214,3176</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -51,6 +51,7 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Net</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,25 +109,31 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="704,2806" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="704,3111" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="PredictPayload" />
       <Variable x:TypeArguments="x:String" Name="Response" />
       <Variable x:TypeArguments="njl:JObject" Name="JsonResponse" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="LabelsList" />
-      <Variable x:TypeArguments="x:String" Name="Auth">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String" xml:space="preserve">Bearer </Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Bearer " Name="Auth" />
+      <Variable x:TypeArguments="ss:SecureString" Name="ApiKey" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="CM API Key" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Personal/ContextToAction" sap:VirtualizedContainerService.HintSize="642,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ApiKey]" />
     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Predict Payload" CacheStrategy="None" DisplayName="Get Asset - Payload for Predict API" FolderPath="Personal/ContextToAction" sap:VirtualizedContainerService.HintSize="642,183" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[PredictPayload]</OutArgument>
@@ -140,6 +147,14 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">[PredictPayload.Replace("&lt;TIME&gt;", System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fff")).Replace("&lt;TO&gt;", "name").Replace("&lt;FROM&gt;", "john@uipath.com").Replace("&lt;SENT&gt;", System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fff"))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="642,122" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Auth]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Auth + New System.Net.NetworkCredential(String.Empty, ApiKey).Password]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" Body="[PredictPayload]" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[in_PredictUrl]" sap:VirtualizedContainerService.HintSize="642,383" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[Response]" TimeoutMS="30000">
